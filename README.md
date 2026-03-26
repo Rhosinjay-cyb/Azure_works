@@ -9,8 +9,8 @@ Creation of Virtual network and multiple Subnets\
 Deployment of VMs\
 Deployment of Azure Firewall alongside Firewall policy\
 Configure of a route table\
-Configure of a UDR
-Configure Application, Network and DNAT rules
+Configure of a UDR\
+Configure Application, Network and DNAT rules\
 Testing of Firewall
 ## Step Taken (Screenshots)
 The process starts with the creation of virtual networks
