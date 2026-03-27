@@ -28,12 +28,27 @@ The application Rule is created as shown below. The first rule is applied to the
 ![image]
 The network rule allows the firewall to send DNS request to the external DNS server for the resolving of domain names. The rule is applicable to VMs that are located in the subnet stated in the source address (HR-subnet and Dev-subnet)\
 ![image] 
-The DNAT rule allows users to connect to the VMs in the subnet through RDP. However, the connections is routed through the firewall.\
+The DNAT rule allows users to connect to the VMs in the subnet through RDP. However, the connections is routed through the firewall. The DNAT rule helps the firewall to identify which VM to send the RDP traffic to. To avoid coflict in RDP traffic, different destination port no is specified for each VM.
 ![image]
 The VMs in both subnets are updated with a primary and secondary DNS address to allow the VMs send DNS request to the external DNS server.
 ## Results (Screenshots)
 The image shows the process to accessing the VM in the HR-subnet via RDP.
-Recall that this connection was possible with the DNAT rule and the connection to the VM is through the firewall
+Recall that this connection was possible with the DNAT rule and the connection to the VM is through the firewall public IP. Hence the firewall public IP and the destination port is specified to enable a connection to the VM (in this case HR-VM)
+![image]\
+![image]\
+The web browser on the HR-VM is launched and it is used to access the websites specified in the application and the connection was succesful while the connection to other websites were denied.
+![image]\
+![image]\
+![image]\
+The process was also repeated for the other VM (Dev-VM)
+The image shows the process to accessing the VM in the Dev-subnet via RDP.
+Recall that this connection was possible with the DNAT rule and the connection to the VM is through the firewall public IP. Hence the firewall public IP and the destination port is specified to enable a connection to the VM (in this case Dev-VM)
+![image]\
+![image]\
+The web browser on the Dev-VM is launched and it is used to access the websites specified in the application and the connection was succesful while the connection to other websites were denied.
+![image]\
+![image]\
+![image]\
 ## Findings
 
 ## Recommendations
