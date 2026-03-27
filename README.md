@@ -11,7 +11,7 @@ Deployment of Azure Firewall alongside firewall policy\
 Configuration of a route table\
 Configuration of a user-defined route (UDR)\
 Configuration of firewall policy (Application, Network and DNAT rules)\
-Updating the VMs DNS server with external DNS address
+Updating the VMs DNS server with external DNS address\
 Testing of the Firewall 
 ## Step Taken (Screenshots)
 The security configuration starts with the deployment of a virtual network alongside with subnets. The first two subnets are for the management of the firewall, while the last two subnets are workload subnets for the HR and Dev teams. The VMs will be deployed in the workload subnets afterwards.\
@@ -32,7 +32,8 @@ The DNAT rule allows users to connect to the VMs in the subnet through RDP. Howe
 ![image]
 The VMs in both subnets are updated with a primary and secondary DNS address to allow the VMs send DNS request to the external DNS server.
 ## Results (Screenshots)
-
+The image shows the process to accessing the VM in the HR-subnet via RDP.
+Recall that this connection was possible with the DNAT rule and the connection to the VM is through the firewall
 ## Findings
 
 ## Recommendations
